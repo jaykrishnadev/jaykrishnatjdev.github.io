@@ -1,2 +1,1 @@
-# jaykrishnatjdev.github.io
-# jaykrishnatjdev.github.io
+# A basic website
