@@ -1,64 +1,70 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="style.css" />
-        <title>Todo App</title>
-        <script src="app.js" defer></script>
-    </head>
 
-    <body>
-        <h1>Todo App</h1>
-        <div class="wrapper">
-            <form>
-                <input
-                    id="todo-input"
-                    type="text"
-                    placeholder="add a todo and enter!"
-                    autocomplete="off"
-                />
-                <button class="add-button">ADD</button>
-            </form>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-            <ul id="todo-list">
-                <!-- first demo todo -->
-                <li class="todo">
-                    <input type="checkbox" id="todo-1" />
-                    <label class="custom-checkbox" for="todo-1">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="24px"
-                            viewBox="0 -960 960 960"
-                            width="24px"
-                            fill="transparent"
-                        >
-                            <path
-                                d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"
-                            />
-                        </svg>
-                    </label>
-                    <label for="todo-1" class="todo-text">
-                        Confess Today :)
-                    </label>
-                    <button class="delete-button">
-                        <svg
-                            xmlns="http://www.w3.org/2000/svg"
-                            height="24px"
-                            viewBox="0 -960 960 960"
-                            width="24px"
-                            fill="var(--secondary-color)"
-                        >
-                            <path
-                                d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
-                            />
-                        </svg>
-                    </button>
-                </li>
-            </ul>
-        </div>
-        <footer>
-             &COPY; Made with Love, Jay
-        </footer>
-    </body>
+  <!-- Link to external stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <title>Todo App</title>
+
+  <!-- Link to external JS with 'defer' to ensure it loads after DOM is ready -->
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <!-- App Heading -->
+  <h1>Todo App</h1>
+
+  <!-- Main wrapper for styling the content easily -->
+  <div class="wrapper">
+
+    <!-- Form to handle new todo submissions -->
+    <form>
+      <!-- Text input for adding new todos -->
+      <!-- autocomplete="off" prevents browser from remembering old todos -->
+      <input id="todo-input" type="text" placeholder="Add a todo and press Enter!" autocomplete="off" />
+
+      <!-- Button to submit new todo -->
+      <button class="add-button">ADD</button>
+    </form>
+
+    <!-- Unordered list to display todos -->
+    <ul id="todo-list">
+      <!-- Example Todo Item -->
+      <li class="todo">
+        <!-- Checkbox to mark todo as complete -->
+        <input type="checkbox" id="todo-1" />
+
+        <!-- Custom styled checkbox using SVG -->
+        <label class="custom-checkbox" for="todo-1">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+            fill="transparent">
+            <path d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z" />
+          </svg>
+        </label>
+
+        <!-- Todo text label -->
+        <label for="todo-1" class="todo-text">
+          Confess Today :)
+        </label>
+
+        <!-- Button to delete a todo -->
+        <button class="delete-button">
+          <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960" width="24px"
+            fill="var(--secondary-color)">
+            <path
+              d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z" />
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <!-- Footer -->
+  <footer>&copy; Made with Love, Jay</footer>
+</body>
+
 </html>

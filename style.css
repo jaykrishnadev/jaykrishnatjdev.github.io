@@ -1,163 +1,216 @@
+/* ==============================
+   Import JetBrains Mono font
+   ============================== */
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap');
+
+/* ==============================
+   CSS Variables for colors
+   Makes theme easy to tweak
+   ============================== */
 :root {
-    --background: #0d1117;       /* darker base background */
-    --primary-color: #161b22;    /* slightly lighter card bg */
-    --secondary-color: #c9d1d9;  /* softer grey for text / lines */
-    --accent-color: #58a6ff;     /* cool blue accent */
-    --text-color: #f0f6fc;       /* slightly softer white */
-}
-* {
-    margin: 0;
-    padding: 0;
+  --background: #0d1117;
+  --primary-color: #161b22;
+  --secondary-color: #c9d1d9;
+  --accent-color: #58a6ff;
+  --text-color: #f0f6fc;
 }
 
+/* ==============================
+   Reset default margins and paddings
+   ============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ==============================
+   Base font & body styles
+   ============================== */
 html {
-    font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-    font-size: 16pt;
-    color: var(--text-color);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 16pt;
+  color: var(--text-color);
 }
 
 body {
-    min-height: 100vh;
-    padding: 10px;
-    display: flex;
-    background-color: var(--background);
-    flex-direction: column;
-    align-items: center;
+  min-height: 100vh;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: var(--background);
 }
 
+/* ==============================
+   Headings
+   ============================== */
 h1 {
-    margin-top: 100px;
-    margin-bottom: 20px;
-    font-size: 3rem;
-    font-weight: 800;
-    text-transform: uppercase;
-    text-align: center;
-    color: var(--accent-color);
+  margin-top: 100px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  text-align: center;
+  color: var(--accent-color);
 }
+
+/* ==============================
+   Footer
+   ============================== */
 footer {
-    font-size: 12px;
+  font-size: 12px;
+  margin-top: auto;
 }
 
+/* ==============================
+   Wrapper for the main content
+   ============================== */
 .wrapper {
-    width: 700px;
-    max-width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
+  width: 700px;
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
 
+/* ==============================
+   Todo input styles
+   ============================== */
 #todo-input {
-    box-sizing: border-box;
-    padding: 12px 20px;
-    width: 100%;
-    background: none;
-    border: 2px solid var(--secondary-color);
-    border-radius: 1000px;
-    font: inherit;
-    color: var(--text-color);
-    caret-color: var(--accent-color);
-}
-#todo-input:focus {
-    outline: none;
+  width: 100%;
+  padding: 12px 20px;
+  border: 2px solid var(--secondary-color);
+  border-radius: 1000px;
+  background: none;
+  font: inherit;
+  color: var(--text-color);
+  caret-color: var(--accent-color);
 }
 
+#todo-input:focus {
+  outline: none;
+  /* Remove default focus outline */
+}
+
+/* ==============================
+   Form and add button positioning
+   ============================== */
 form {
-    position: relative;
+  position: relative;
 }
 
 .add-button {
-    position: absolute;
-    top: 0;
-    right: 0;
-
-    background-color: var(--accent-color);
-    height: 100%;
-    padding: 0 30px;
-    border: none;
-    border-radius: 1000px;
-    font: inherit;
-    font-weight: 600;
-    color: var(--background);
-    cursor: pointer;
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  padding: 0 30px;
+  border: none;
+  border-radius: 1000px;
+  font: inherit;
+  font-weight: 600;
+  background-color: var(--accent-color);
+  color: var(--background);
+  cursor: pointer;
 }
 
+/* ==============================
+   Todo list items
+   ============================== */
 .todo {
-    margin-bottom: 10px;
-    padding: 0 16px;
-    background: var(--primary-color);
-    border-radius: 15px;
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  padding: 0 16px;
+  background: var(--primary-color);
+  border-radius: 15px;
 }
 
+/* Text inside todos */
 .todo .todo-text {
-    padding: 15px;
-    padding-right: 0;
-    flex-grow: 1;
-    transition: 200ms ease;
+  flex-grow: 1;
+  padding: 15px;
+  padding-right: 0;
+  transition: 200ms ease;
 }
 
+/* ==============================
+   Delete button
+   ============================== */
 .delete-button {
-    padding: 3px;
-    background: none;
-    border: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    cursor: pointer;
+  padding: 3px;
+  background: none;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
 .delete-button svg {
-    transition: 200ms ease;
+  transition: 200ms ease;
 }
+
 .delete-button:hover svg {
-    fill: #ff0033;
+  fill: #ff0033;
+  /* Red on hover */
 }
 
+/* ==============================
+   Custom checkbox
+   ============================== */
 .custom-checkbox {
-    border: 2px solid var(--accent-color);
-    border-radius: 50%;
-    min-height: 20px;
-    min-width: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-shrink: 0;
-    transition: 200ms ease;
-    cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 20px;
+  min-height: 20px;
+  border: 2px solid var(--accent-color);
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: 200ms ease;
 }
 
-input[type="checkbox"]:checked ~ .custom-checkbox {
-    background-color: var(--accent-color);
+/* Checked state styles */
+input[type="checkbox"]:checked~.custom-checkbox {
+  background-color: var(--accent-color);
 }
 
-input[type="checkbox"]:checked ~ .custom-checkbox svg {
-    fill: var(--primary-color);
+input[type="checkbox"]:checked~.custom-checkbox svg {
+  fill: var(--primary-color);
 }
 
-input[type="checkbox"]:checked ~ .todo-text {
-    text-decoration: line-through;
-    color: var(--secondary-color);
+input[type="checkbox"]:checked~.todo-text {
+  text-decoration: line-through;
+  color: var(--secondary-color);
 }
 
+/* Hide native checkbox */
 input[type="checkbox"] {
-    display: none;
+  display: none;
 }
 
+/* ==============================
+   Responsive adjustments
+   ============================== */
 @media (max-width: 500px) {
-    html {
-        font-size: 12px;
-    }
-    .add-button {
-        position: unset;
-        width: 100%;
-        padding: 15px;
-        margin: 10px;
-        margin-left: 0;
-        height: auto;
-    }
-    h1 {
-        margin-top: 50px;
-        font-size: 15vw;
-    }
+  html {
+    font-size: 12px;
+  }
+
+  h1 {
+    margin-top: 50px;
+    font-size: 15vw;
+    /* Scales heading on small screens */
+  }
+
+  .add-button {
+    position: unset;
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0 0 0;
+    height: auto;
+  }
 }
