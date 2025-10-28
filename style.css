@@ -1,9 +1,9 @@
 :root {
-    --background: #101114;
-    --primary-color: #1c1d20;
-    --secondary-color: #4a4d57;
-    --accent-color: #00ffc4;
-    --text-color: #f9f9f9;
+    --background: #0d1117;       /* darker base background */
+    --primary-color: #161b22;    /* slightly lighter card bg */
+    --secondary-color: #c9d1d9;  /* softer grey for text / lines */
+    --accent-color: #58a6ff;     /* cool blue accent */
+    --text-color: #f0f6fc;       /* slightly softer white */
 }
 * {
     margin: 0;
@@ -33,6 +33,9 @@ h1 {
     text-transform: uppercase;
     text-align: center;
     color: var(--accent-color);
+}
+footer {
+    font-size: 12px;
 }
 
 .wrapper {
