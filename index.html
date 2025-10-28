@@ -1,50 +1,61 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<title>
-			Nature the Future
-		</title>
-		<link rel="stylesheet" href="css/style.css"
-	</head>
-	
-	<body>
-		<div class="bigbox">
-			
-			<nav class="bar">
-				<div class="logo">
-					<h1>Back to Nature</h1>
-				</div>
-				<ul>
-					<li><a href="about.html" target="_blank">About</a></li>
-					<li><a href="contact.html" target="_blank">Contact Us</a></li>
-				</ul>
-			</nav>
-			<div class="hero">
-				<img src="images/forest.jpeg">
-				<p>Forests are being lost at an alarming rate due to deforestation. This not only threatens biodiversity but also disrupts the carbon cycle. Trees play a crucial role in absorbing carbon dioxide <strong>(carbon sequestration)</strong>, helping to combat climate change. Protecting forests is essential for a healthier planet and a stable climate.</p>
-			</div>
-			<div class="twin-divs">
-				
-				<div class="first">
-					<img src="images/think.jpeg">
-					<h2>Nature can help us improve our thinking, reasoning, and other mental abilities</h2>
-					<p>Spending time in nature enhances cognitive function and mental clarity. It allows the brain to rest from constant digital stimulation, boosting creativity, focus, and problem-solving skills. Nature serves as a natural therapy for reducing mental fatigue and enhancing emotional well-being.</p>
-					
-				</div>
-				<div class="second">
-					<img src="images/body.jpeg">
-					<h2>Nature can improve physical wellness</h2>
-					<p>Exposure to natural environments has been shown to reduce stress hormones like cortisol, lower blood pressure, and improve heart health. Regular time outdoors encourages physical activity, supports immune function, and contributes to overall physical vitality.</p>
-					
-				</div>
-				
-			</div>
-			
-			<footer>
-				<p>&copy;2025 Jay The Dev</p>
-			</footer>
-			
-		</div>
-	</body>
-	
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Todo App</title>
+        <script src="app.js" defer></script>
+    </head>
+
+    <body>
+        <h1>Todo App</h1>
+        <div class="wrapper">
+            <form>
+                <input
+                    id="todo-input"
+                    type="text"
+                    placeholder="add a todo and enter!"
+                    autocomplete="off"
+                />
+                <button class="add-button">ADD</button>
+            </form>
+
+            <ul id="todo-list">
+                <!-- first demo todo -->
+                <li class="todo">
+                    <input type="checkbox" id="todo-1" />
+                    <label class="custom-checkbox" for="todo-1">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="transparent"
+                        >
+                            <path
+                                d="M382-240 154-468l57-57 171 171 367-367 57 57-424 424Z"
+                            />
+                        </svg>
+                    </label>
+                    <label for="todo-1" class="todo-text">
+                        Confess Today :)
+                    </label>
+                    <button class="delete-button">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 -960 960 960"
+                            width="24px"
+                            fill="var(--secondary-color)"
+                        >
+                            <path
+                                d="M280-120q-33 0-56.5-23.5T200-200v-520h-40v-80h200v-40h240v40h200v80h-40v520q0 33-23.5 56.5T680-120H280Zm400-600H280v520h400v-520ZM360-280h80v-360h-80v360Zm160 0h80v-360h-80v360ZM280-720v520-520Z"
+                            />
+                        </svg>
+                    </button>
+                </li>
+            </ul>
+        </div>
+    </body>
 </html>
